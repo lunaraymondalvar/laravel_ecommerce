@@ -36,7 +36,7 @@
 						</td>
 						<td>{{ $item->price }}</td>
 						<td class="text-right">{{ $item->subtotal }}</td>
-						<td>
+						<td class="justify-content-center">
 							<form method="POST" action="/menu/mycart/{{$item->id}}/delete">
 								{{ csrf_field() }}
 								{{ method_field("DELETE") }}

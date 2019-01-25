@@ -1,3 +1,9 @@
+@extends('layouts.app')
+
+@section('title', 'Catalog Page')
+
+
+@section('content')
 
 <!DOCTYPE html>
 <html lang="en">
@@ -12,10 +18,12 @@
 <body>
 	<h1 class="text-center">Catalog Page</h1>
 
+
+
 	<h2>Categories</h2>
 	<a href="#" class="btn btn-primary">All</a>
-	@foreach($categories as $category)
-		<a href="#" class="btn btn-primary">{{ $category->name }}</a>
+	@foreach(\App\Category::all() as $category)
+		<a href="/menu/categories/{{$category->id}}" class="btn btn-primary">{{ $category->name }}</a>
 	@endforeach
 
 	<hr>
@@ -58,7 +66,7 @@
 </body>
 </html>
 
-
+@endsection
 
 	
 

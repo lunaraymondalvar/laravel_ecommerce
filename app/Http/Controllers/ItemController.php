@@ -131,6 +131,7 @@ class ItemController extends Controller
 
     public function showCart() {
         $item_cart = [];
+        // Session::forget('cart');
         $total = 0;
         if(Session::has('cart')) {
             $cart = Session::get('cart');
